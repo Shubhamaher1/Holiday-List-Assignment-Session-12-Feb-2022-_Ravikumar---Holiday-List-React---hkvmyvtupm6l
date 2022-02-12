@@ -47,7 +47,9 @@ class App extends Component {
       <div id="main">
         <ol>
           {this.tempArr.map((ele, index) => {
-            return <li key={`location${index + 1}`}>{ele.name}</li>;
+            if (index < 3) {
+              return <li key={`location${index + 1}`}>{ele.name}</li>;
+            }
           })}
         </ol>
         {/* Do not remove the main div */}
