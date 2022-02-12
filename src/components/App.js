@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import "../styles/App.css";
+// import "../styles/App.css";
 
 const tempArr = [];
 class App extends Component {
@@ -40,7 +40,7 @@ class App extends Component {
 
   render() {
     this.tempArr = this.cityList.filter((ele, index) => {
-      if (index < 3) return ele.name;
+      return ele.country === "India";
     });
 
     return (
@@ -57,3 +57,4 @@ class App extends Component {
 }
 
 export default App;
+//
